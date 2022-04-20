@@ -1,0 +1,38 @@
+#offers_container {
+  margin-top: 125px;
+
+  .header {
+    width: auto;
+  }
+
+  #offerContainer {
+    margin-top: 45px;
+    #offer_banner {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+
+      .offer_item {
+        border-radius: 3rem;
+        width: 541px;
+        cursor: pointer;
+
+        img:last-child {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #offer_banner {
+    flex-direction: column;
+    .offer_item {
+      width: auto !important;
+    }
+  }
+}

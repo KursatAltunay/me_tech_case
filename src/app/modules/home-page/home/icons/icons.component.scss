@@ -1,0 +1,105 @@
+#iconContainer {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  gap: 85px;
+  padding-left: 254px;
+  padding-top: 50px;
+
+  .iconContent {
+    background-color: white;
+    width: 291px;
+    height: 409px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 33px 0px 33px;
+
+    .logoContent {
+      display: flex;
+      justify-content: center;
+
+      .outerDot {
+        margin: 30px 14px 0px 14px;
+        width: 197px;
+        height: 197px;
+        border-radius: 50%;
+        background-color: #00923e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .innerDot {
+          width: 149px;
+          height: 149px;
+          border-radius: 50%;
+          background-color: rgba(0, 150, 64, 0);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: rgb(0 0 0 / 16%) 0px 10px 36px 0px,
+            rgb(0 0 0 / 6%) 0px 0px 0px 1px;
+        }
+      }
+    }
+
+    .labelContent {
+      margin-top: 28px;
+      font-family: "Quicksand Book", sans-serif;
+      color: #575756;
+      text-align: center;
+
+      p:first-child {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1795px) {
+  #iconContainer {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  #steppers {
+    margin: 0px;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  #iconContainer {
+    padding-top: 0px !important;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  #iconContainer {
+    gap: 0px;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .logoContent {
+   display: none !important;
+  }
+
+  .iconContent{
+    width: auto !important;
+    height: auto !important;
+  }
+
+  #iconContainer{
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  #iconContainer{
+    flex-direction: column;
+  }
+}

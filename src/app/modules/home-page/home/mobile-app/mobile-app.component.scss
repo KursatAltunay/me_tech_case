@@ -1,0 +1,124 @@
+#mobileApp {
+  background-image: url(../../../../../assets/mobile/mobile_app_bg.png);
+  height: 600px;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  #mobileContent {
+    padding: 100px 460px 0px 1014px;
+
+    .logo_container {
+      display: flex;
+      gap: 13px;
+
+      img {
+        cursor: pointer;
+      }
+    }
+
+    .label_container {
+      margin: 90px 0 0 0;
+      display: flex;
+      flex-direction: column;
+
+      .header-section {
+        justify-content: unset;
+        margin-bottom: 20px;
+        label {
+          width: auto;
+          font-size: 30px;
+          height: 100%;
+        }
+      }
+
+      .content {
+        font-size: 18px;
+        p:first-child {
+          padding-right: 75px;
+        }
+        margin-bottom: 32px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1883px) {
+  .label_container {
+    margin: 0px !important;
+  }
+}
+@media screen and (max-width: 1795px) {
+  #mobileContent {
+    padding: 100px 260px 0px 914px !important;
+  }
+}
+@media screen and (max-width: 1600px) {
+  #mobileApp {
+    display: flex;
+    justify-content: end;
+    padding-top: 50px;
+  }
+  #mobileContent {
+    padding: 0px !important;
+  }
+}
+@media screen and (max-width: 1350px) {
+  #mobileApp {
+    height: auto;
+    margin-bottom: 30px;
+    padding-top: 0px !important;
+    background-size: cover;
+
+    #mobileContent {
+      padding: 20px !important;
+    }
+
+    .header,
+    .content {
+      font-size: 14px !important;
+    }
+  }
+}
+@media screen and (max-width: 1028px) {
+  #mobileApp {
+    background-image: none;
+    justify-content: left;
+    background-color: white;
+
+    #mobileContent {
+      display: flex;
+      gap: 20px;
+    }
+  }
+}
+@media screen and (max-width: 950px) {
+  #mobileContent {
+    width: 100%;
+    justify-content: space-between;
+
+    .logo_container {
+      flex-direction: column;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  #mobileContent {
+    flex-direction: column;
+  }
+
+  .logo_container {
+    align-items: center;
+  }
+
+  .label_container {
+    .content {
+      p {
+        padding: 0px !important;
+      }
+    }
+  }
+
+  .qr_container {
+    align-self: center;
+  }
+}

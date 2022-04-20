@@ -1,0 +1,102 @@
+#steps_container {
+  height: 446px;
+  background-color: #00933a;
+  margin-top: 123px;
+
+  #stepHeader {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+
+    label {
+      margin-top: 69px;
+      font-family: "Quicksand Book", sans-serif;
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+
+  #steppers {
+    margin: 0px 254px 0px 254px;
+    display: flex;
+
+    .step_container {
+      margin-right: 8px;
+      .dot {
+        height: 155px;
+        width: 155px;
+        border-radius: 50%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          align-self: center;
+        }
+        img#downArrow {
+          position: absolute;
+          left: 30px;
+          top: 40px;
+        }
+      }
+
+      .positionRelative {
+        position: relative;
+      }
+
+      .step_info {
+        label {
+          font-family: "Quicksand Book", sans-serif;
+          color: white;
+          font-size: 16px;
+          margin: 17px 23px 0px 23px;
+          width: 110px;
+          text-align: center;
+        }
+      }
+    }
+
+    .step_container:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 1795px) {
+  #steppers {
+    margin: 0px !important;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .arrow {
+    display: none;
+  }
+}
+@media screen and (max-width: 991px) {
+  #steps_container {
+    height: auto !important;
+    padding: 20px;
+  }
+  #stepHeader {
+    label {
+      margin-top: 0px !important;
+    }
+  }
+  .dot {
+    display: none !important;
+  }
+
+  .step_info {
+    label {
+      width: auto !important;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  #steppers {
+    flex-direction: column;
+  }
+}

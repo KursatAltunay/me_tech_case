@@ -1,0 +1,79 @@
+#campaigns {
+  width: 1704px;
+  height: 479px;
+  margin: 90px 90px 0px 90px;
+
+  #campaigns_container {
+    height: 100%;
+    margin-top: 44px;
+    display: flex;
+    flex-direction: column;
+
+    #campaign_banner {
+      display: flex;
+      gap: 40px;
+
+      .campaign_item {
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .button_container {
+      margin-top: 54px;
+      display: flex;
+      justify-content: center;
+
+      #seeAllButton {
+        height: 51px;
+        font-family: "Quicksand Book", sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+        display: inline-flex;
+        color: white;
+
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      #seeAllButton div:first-child {
+        background-color: #009640;
+        border-radius: 3rem 0 0 3rem;
+        width: 110px;
+      }
+
+      #seeAllButton div:last-child {
+        border-radius: 0 3rem 3rem 0;
+        width: 40px;
+        border-radius: 0 3rem 3rem 0;
+        background-color: #007f36;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1795px) {
+  #campaigns {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+
+    #campaign_banner {
+      justify-content: space-around;
+    }
+  }
+}
+
+@media screen and (max-width: 950px){
+  #campaigns{
+    height: auto;
+
+    #campaign_banner{
+      flex-direction: column;
+    }
+  }
+}

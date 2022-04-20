@@ -1,0 +1,15 @@
+<div id="iconContainer" class="col-lg-12">
+  <div class="iconContent" *ngFor="let item of IconContents">
+    <div class="logoContent">
+      <div class="outerDot">
+        <div class="innerDot">
+          <img src=" {{item.contentIcon}} " alt=" logo{{item.id}} ">
+        </div>
+      </div>
+    </div>
+    <div class="labelContent">
+      <p>{{item.contentHeader}}</p>
+      <p>{{item.contentText}}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="container">
+  <ngb-carousel [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="../../../../../assets/banner/banner.png" alt="background layer">
+        <div class="manuel_slider_container">
+          <ul>
+            <li>
+              <div></div>
+            </li>
+            <li>
+              <div></div>
+            </li>
+            <li>
+              <div class="selected"></div>
+            </li>
+            <li>
+              <div></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
+<div class="brand_slider">
+  <div class="navigation_arrow back_arrow">
+    <a (click)="navigateBrand('back')" type="button"><i class="fa fa-chevron-left"></i></a>
+  </div>
+  <div class="logo_container">
+    <img *ngFor="let brand of brands;let i = index" (click)="brandClick(i)" [class.pasive_brand]="!brand.isSelected"
+      src="{{brand.imagePath}}" alt="{{brand.name}}">
+  </div>
+  <div class="navigation_arrow next_arrow">
+    <a (click)="navigateBrand('next')" type="button"><i class="fa fa-chevron-right"></i></a>
+  </div>
+</div>

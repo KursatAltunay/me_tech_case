@@ -1,0 +1,21 @@
+<div id="campaigns">
+  <div class="header-section col-lg-12">
+    <label class="header">
+      Kampanyalar
+    </label>
+  </div>
+
+  <div id="campaigns_container" class="col-lg-12">
+    <div id="campaign_banner">
+      <div class="campaign_item" *ngFor="let campaign of campaigns">
+        <img src=" {{campaign.image}} " alt=" {{campaign.name}}">
+      </div>
+    </div>
+    <div class="button_container">
+      <div type="button" id="seeAllButton">
+        <div>Tümünü Gör</div>
+        <div>></div>
+      </div>
+    </div>
+  </div>
+</div>

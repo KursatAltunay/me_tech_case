@@ -1,0 +1,48 @@
+<div class="" id="categories">
+  <div class="header-section col-lg-12">
+    <label class="header">
+      Kategoriler
+    </label>
+  </div>
+
+  <div id="categories_container">
+    <div class="" id="categories_menu">
+      <div class="navigation_arrow back_arrow" style="display: none;">
+        <a (click)="navigateBrand('back')" type="button"><i class="fa fa-chevron-left"></i></a>
+      </div>
+      <div class="menu_item" (click)="selectMenu(item.id)" [class.selected]="item.isSelected" *ngFor="let item of menu">
+        <a type="button"><img src="{{item.image}}" alt="{{item.name}}"></a>
+        <label>{{item.name}}</label>
+      </div>
+      <div class="navigation_arrow next_arrow" style="display: none;">
+        <a (click)="navigateBrand('next')" type="button"><i class="fa fa-chevron-right"></i></a>
+      </div>
+    </div>
+    <div class="" id="categories_content">
+      <div class="content_item col-lg-3" *ngFor="let product of displayProducts">
+        <div class="image_container">
+          <img src="{{product.image}}" alt="item.name">
+        </div>
+        <div class="label_container"> <label>{{product.name}} </label></div>
+        <div class="chart_container">
+          <div class="price_area"> <span class="price">{{product.price | currency:'EUR':'symbol':'1.2-2' }}</span>
+          </div>
+          <div class="chart">
+            <a *ngIf="product.count == 0" (click)="addToChart(product.id)" class="basket" type="button"><i
+                class="fa fa-shopping-cart"></i></a>
+            <div *ngIf="product.count !== 0" class="counter">
+              <a type="button" (click)="changeChartCount(product.id, false)" class="minus"><i class="fa fa-minus-circle"
+                  aria-hidden="true"></i></a>
+              <span class="count"> {{product.count}} </span>
+              <a type="button" (click)="changeChartCount(product.id, true)" class="plus"><i class="fa fa-plus-circle"
+                  aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

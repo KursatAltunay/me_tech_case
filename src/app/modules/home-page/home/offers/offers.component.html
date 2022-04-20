@@ -1,0 +1,17 @@
+<div id="offers_container" class="col-lg-12">
+  <div class="header-section col-lg-12">
+    <label class="header">
+      Sizin İçin Seçtiklerimiz
+    </label>
+  </div>
+
+  <div id="offerContainer" class="col-lg-12">
+    <div id="offer_banner" class="col-lg-12">
+      <div class="offer_item" *ngFor="let offer of offers">
+        <img src=" {{offer.image}} " alt="{{offer.name}}">
+      </div>
+
+    </div>
+  </div>
+
+</div>

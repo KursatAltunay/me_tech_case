@@ -1,0 +1,18 @@
+.home-container {
+  background-color: #f5f5f5;
+}
+:host::ng-deep {
+  .header-section {
+    display: flex;
+    justify-content: center;
+
+    label {
+      font-size: 21px;
+      font-family: "Quicksand Book", sans-serif;
+      color: #009640;
+      width: 161px;
+      height: 29px;
+      font-weight: bold;
+    }
+  }
+}
