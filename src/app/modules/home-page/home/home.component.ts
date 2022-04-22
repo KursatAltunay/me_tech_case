@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Guid } from 'guid-typescript';
+import { BrandBanner } from 'src/app/services/home/banner/model/brandBanner';
+import { HomeCommunicationService } from '../../../core/service/home-communication.service';
+import { PhotoServiceService } from 'src/app/services/home/service/photo-service.service';
 
 @Component({
   selector: 'app-home',
@@ -9,25 +12,32 @@ import { Guid } from 'guid-typescript';
 })
 export class HomeComponent implements OnInit {
 
-  // taskList: TaskModel[] = [];
-
-  form: FormGroup;
+  imageList: any[] = [];
 
 
   constructor(
-    // private  formBuilder: FormBuilder
+    private photoService: PhotoServiceService,
+    private homeCommunicationService: HomeCommunicationService
   ) { }
 
   ngOnInit(): void {
-    // this.initForm();
+    this.getRandomImageList();
   }
 
+  getRandomImageList() {
+    this.photoService.getRandomImageList().subscribe(res => {
+      if (res) {
+        this.imageList = res.map(x => {
+          return {
+            id: +x.id,
+            source: 'https://picsum.photos/id/' + x.id + '/900/500',
+            author: x.author
+          }
+        })
+        this.homeCommunicationService.setImageList(this.imageList)
+      }
+    })
+  }
 
-  // private initForm() {
-  //   this.form = this.formBuilder.group({
-  //     task : new FormControl('', Validators.required)
-  //   });
-  //   const id = Guid.create().toString();
-  // }
 
 }

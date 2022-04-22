@@ -30,6 +30,8 @@
     "flag-icons": "^6.2.0",
     "font-awesome": "^4.7.0",
     "guid-typescript": "^1.0.9",
+    "lorem-ipsum": "^2.0.4",
+    "ng-image-slider": "^2.8.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

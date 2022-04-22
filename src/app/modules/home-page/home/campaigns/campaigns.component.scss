@@ -1,3 +1,19 @@
+:host::ng-deep {
+  .ng-image-slider .ng-image-slider-container .main .main-inner .img-div {
+    border-radius: 3rem;
+
+    .image {
+      border-radius: 1rem;
+    }
+  }
+
+  .ng-image-slider .ng-image-slider-container {
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
 #campaigns {
   width: 1704px;
   height: 479px;
@@ -8,17 +24,6 @@
     margin-top: 44px;
     display: flex;
     flex-direction: column;
-
-    #campaign_banner {
-      display: flex;
-      gap: 40px;
-
-      .campaign_item {
-        img {
-          width: 100%;
-        }
-      }
-    }
 
     .button_container {
       margin-top: 54px;
@@ -56,24 +61,16 @@
   }
 }
 
-@media screen and (max-width: 1795px) {
+@media screen and (max-width: 1822px) {
   #campaigns {
     margin-left: 0px;
     margin-right: 0px;
     width: 100%;
-
-    #campaign_banner {
-      justify-content: space-around;
-    }
   }
 }
 
-@media screen and (max-width: 950px){
-  #campaigns{
+@media screen and (max-width: 950px) {
+  #campaigns {
     height: auto;
-
-    #campaign_banner{
-      flex-direction: column;
-    }
   }
 }

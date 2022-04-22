@@ -20,6 +20,7 @@ export class CategoriesComponent implements OnInit {
   ]
 
   products = []
+  menuInterval = null;
 
   constructor() {
     this.products = productsDataset;
@@ -55,9 +56,11 @@ export class CategoriesComponent implements OnInit {
     else {
       this.displayProducts = this.products.filter(x => x.menuId.includes(selectedMenuId))
     }
+    clearTimeout(this.menuInterval);
+    this.setMenuInterval();
   }
 
-  navigateBrand(navigation: string) {
+  navigateMenu(navigation: string) {
     const activeMenu = this.menu.find(x => x.isSelected == true)
     const indexOfActiveMenu = this.menu.indexOf(activeMenu);
 
@@ -81,6 +84,13 @@ export class CategoriesComponent implements OnInit {
     }
     activeMenu.isSelected = false;
     this.filterDisplayProducts();
+  }
+
+
+  setMenuInterval() {
+    this.menuInterval = setTimeout(() => {
+      this.navigateMenu("next")
+    }, 4000);
   }
 
 }

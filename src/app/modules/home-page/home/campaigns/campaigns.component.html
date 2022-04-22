@@ -6,11 +6,9 @@
   </div>
 
   <div id="campaigns_container" class="col-lg-12">
-    <div id="campaign_banner">
-      <div class="campaign_item" *ngFor="let campaign of campaigns">
-        <img src=" {{campaign.image}} " alt=" {{campaign.name}}">
-      </div>
-    </div>
+    <ng-image-slider [images]="imageObject" [imageSize]="imageSize" #nav (imageClick)="imageClick($event)"
+      [defaultActiveImage]="defaultActiveImage" [imagePopup]="false">
+    </ng-image-slider>
     <div class="button_container">
       <div type="button" id="seeAllButton">
         <div>Tümünü Gör</div>

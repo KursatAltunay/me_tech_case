@@ -15,6 +15,7 @@ import { MobileAppComponent } from './home/mobile-app/mobile-app.component';
 import { IconsComponent } from './home/icons/icons.component';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { PartialModule } from '../partial/partial.module';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 
 
@@ -38,7 +39,8 @@ import { PartialModule } from '../partial/partial.module';
     ]),
     ReactiveFormsModule,
     NgbCarouselModule,
-    PartialModule
+    PartialModule,
+    NgImageSliderModule
   ]
 })
 export class HomePageModule { }

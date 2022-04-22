@@ -1,24 +1,9 @@
 <div class="container">
-  <ngb-carousel [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
-    <ng-template ngbSlide>
+  <ngb-carousel [interval]="bannerInterval" [showNavigationArrows]="false"
+    [showNavigationIndicators]="showNavigationIndicators">
+    <ng-template ngbSlide *ngFor="let source of displayBanners; let sourceIndex = index">
       <div class="picsum-img-wrapper">
-        <img src="../../../../../assets/banner/banner.png" alt="background layer">
-        <div class="manuel_slider_container">
-          <ul>
-            <li>
-              <div></div>
-            </li>
-            <li>
-              <div></div>
-            </li>
-            <li>
-              <div class="selected"></div>
-            </li>
-            <li>
-              <div></div>
-            </li>
-          </ul>
-        </div>
+        <img [src]="source" alt="background layer">
       </div>
     </ng-template>
   </ngb-carousel>

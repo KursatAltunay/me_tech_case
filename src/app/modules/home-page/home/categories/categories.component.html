@@ -8,14 +8,14 @@
   <div id="categories_container">
     <div class="" id="categories_menu">
       <div class="navigation_arrow back_arrow" style="display: none;">
-        <a (click)="navigateBrand('back')" type="button"><i class="fa fa-chevron-left"></i></a>
+        <a (click)="navigateMenu('back')" type="button"><i class="fa fa-chevron-left"></i></a>
       </div>
       <div class="menu_item" (click)="selectMenu(item.id)" [class.selected]="item.isSelected" *ngFor="let item of menu">
         <a type="button"><img src="{{item.image}}" alt="{{item.name}}"></a>
         <label>{{item.name}}</label>
       </div>
       <div class="navigation_arrow next_arrow" style="display: none;">
-        <a (click)="navigateBrand('next')" type="button"><i class="fa fa-chevron-right"></i></a>
+        <a (click)="navigateMenu('next')" type="button"><i class="fa fa-chevron-right"></i></a>
       </div>
     </div>
     <div class="" id="categories_content">
@@ -40,7 +40,10 @@
             </div>
           </div>
         </div>
+      </div>
 
+      <div *ngIf="this.displayProducts.length == 0" class="no_item_found">
+        <p>Bu kategoride ürün bulunmamaktadır.</p>
       </div>
     </div>
   </div>
